@@ -1,0 +1,51 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main ()
+{
+	string newentry;
+	string allEntries;
+	string password = "null";
+
+	int select = 0;
+
+	cout << "\nDiary Manager v1.0\n";
+	cout << "1. New Entry\n2. View Entries\n3. Remove Entry\n4. Change Password\n5. Exit\n\n";
+	cout << "Enter a command code:\n";
+	
+	cin >> select;
+
+	if (select == 5) {
+		system("Pause");
+		return 0;
+	}
+	else {
+		switch (select)
+		{
+		case 1:
+			cout << "Enter your new entry here:\n";
+			getline(cin, newentry);
+			allEntries += "\n" + newentry;
+			break;
+		case 2:
+			cout << allEntries << endl;
+			system("Pause");
+			break;
+		case 3:
+			cout << allEntries << endl;
+			system("Pause");
+			cout << "Which entry would you like deleted?\n";
+		case 4:
+			cout << "Your current password is " << password << "." << endl << "What would you like to change it to?" << endl;
+			cin >> password;
+			system("pause");
+			break;
+		}
+		cout << "\nDiary Manager v1.0\n";
+		cout << "1. New Entry\n2. View Entries\n3. Remove Entry\n4. Change Password\n5. Exit\n\n";
+		cout << "Enter a command code:\n";
+	}
+}
